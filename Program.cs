@@ -120,6 +120,13 @@ using (var scope = app.Services.CreateScope())
     await EnsureRolesAsync(roleManager);
 }
 
+// **Apply Migrations Automatically**
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
+
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
