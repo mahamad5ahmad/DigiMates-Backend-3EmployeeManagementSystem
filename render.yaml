@@ -8,11 +8,11 @@ services:
     dockerfilePath: ./Dockerfile
     envVars:
       - key: MYSQL_DATABASE
-        value: TestDB
+        value: mydb
       - key: MYSQL_USER
-        value: rooot
+        value: myuser
       - key: MYSQL_PASSWORD
-        value: 0193247637mM!
+        value: mypassword
       - key: MYSQL_ROOT_PASSWORD
-        value: 0193247637mM!
+        value: rootpassword
     plan: starter
