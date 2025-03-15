@@ -1,0 +1,18 @@
+services:
+  - type: private-service
+    name: mysql-db
+    runtime: docker
+    repo: https://github.com/mahamad5ahmad/DigiMates-Backend-3EmployeeManagementSystem
+    branch: main
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MYSQL_DATABASE
+        value: TestDB
+      - key: MYSQL_USER
+        value: rooot
+      - key: MYSQL_PASSWORD
+        value: 0193247637mM!
+      - key: MYSQL_ROOT_PASSWORD
+        value: 0193247637mM!
+    plan: starter

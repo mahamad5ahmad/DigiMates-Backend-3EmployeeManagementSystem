@@ -1,3 +1,19 @@
+# Use the official MySQL image from Docker Hub
+FROM mysql:latest
+
+# Set MySQL environment variables (modify these values)
+ENV MYSQL_DATABASE=TestDB
+ENV MYSQL_USER=rooot
+ENV MYSQL_PASSWORD=0193247637mM!
+ENV MYSQL_ROOT_PASSWORD=0193247637mM!
+
+# Expose MySQL default port
+EXPOSE 3306
+
+# Run MySQL
+CMD ["mysqld"]
+
+
 # Use the official .NET 8.0 runtime as the base image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
